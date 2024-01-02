@@ -1,0 +1,31 @@
+
+
+func qToB(inputNum: String) -> String{
+ 
+    let originalNumArray = Array(inputNum)
+    var bNumArray = Array<String>()
+    
+    var i = 0
+    
+    while (i < originalNumArray.count){
+        let tempNum = originalNumArray[i]
+        
+        if tempNum == "0"{
+            bNumArray.append(TWO_DIGIT_BINARY[0])
+        } else if tempNum == "1"{
+            bNumArray.append(TWO_DIGIT_BINARY[1])
+        } else if tempNum == "2"{
+            bNumArray.append(TWO_DIGIT_BINARY[2])
+        } else if tempNum == "3"{
+            bNumArray.append(TWO_DIGIT_BINARY[3])
+        } else {
+            outputMessageColour = Color.red
+            return "Error with input."
+        }
+        
+        i += 1
+    }
+    
+    let bNum = bNumArray.joined()
+    return bNum
+}
