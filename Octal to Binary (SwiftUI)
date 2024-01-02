@@ -1,0 +1,38 @@
+
+
+func oToB(inputNum: String) -> String{
+    let originalNumArray = Array(inputNum)
+    var bNumArray = Array<String>()
+    
+    var i = 0
+    
+    while (i < originalNumArray.count){
+        let tempNum = originalNumArray[i]
+        
+        if tempNum == "0"{
+            bNumArray.append(THREE_DIGIT_BINARY[0])
+        } else if tempNum == "1"{
+            bNumArray.append(THREE_DIGIT_BINARY[1])
+        } else if tempNum == "2"{
+            bNumArray.append(THREE_DIGIT_BINARY[2])
+        } else if tempNum == "3"{
+            bNumArray.append(THREE_DIGIT_BINARY[3])
+        } else if tempNum == "4"{
+            bNumArray.append(THREE_DIGIT_BINARY[4])
+        } else if tempNum == "5"{
+            bNumArray.append(THREE_DIGIT_BINARY[5])
+        } else if tempNum == "6"{
+            bNumArray.append(THREE_DIGIT_BINARY[6])
+        } else if tempNum == "7"{
+            bNumArray.append(THREE_DIGIT_BINARY[7])
+        } else {
+            outputMessageColour = Color.red
+            return "Error with input."
+        }
+        
+        i += 1
+    }
+    
+    let bNum = bNumArray.joined()
+    return bNum
+}
