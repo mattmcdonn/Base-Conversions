@@ -1,4 +1,8 @@
-
+/* * * * * * * * * * * * * * * * * * * *
+ *  Written by Matthew James McDonald  *
+ * * * * * * * * * * * * * * * * * * * *
+ *  FUNCTION BINARY TO DECIMAL         *
+ * * * * * * * * * * * * * * * * * * * */
 
 func bToD(inputNum: String) -> String{
     
