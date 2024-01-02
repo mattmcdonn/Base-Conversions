@@ -1,0 +1,67 @@
+
+
+func bToH(inputNum: String) -> String{
+    
+    var originalNumArray = Array(inputNum)
+    var hNumArray = Array<String>()
+
+    if originalNumArray.count % 4 == 1 {
+        originalNumArray.insert("0", at: 0)
+        originalNumArray.insert("0", at: 0)
+        originalNumArray.insert("0", at: 0)
+    } else if originalNumArray.count % 4 == 2{
+        originalNumArray.insert("0", at: 0)
+        originalNumArray.insert("0", at: 0)
+    } else if originalNumArray.count % 4 == 3{
+        originalNumArray.insert("0", at: 0)
+    }
+
+    var i = 0
+
+    while i < originalNumArray.count {
+        let tempArray = [String(originalNumArray[i]), String(originalNumArray[i + 1]), String(originalNumArray[i + 2]), String(originalNumArray[i + 3])]
+        let tempNum = tempArray[0] + tempArray[1] + tempArray[2] + tempArray[3]
+
+        if tempNum == FOUR_DIGIT_BINARY[0]{
+            hNumArray.append("0")
+        } else if tempNum == FOUR_DIGIT_BINARY[1]{
+            hNumArray.append("1")
+        } else if tempNum == FOUR_DIGIT_BINARY[2]{
+            hNumArray.append("2")
+        } else if tempNum == FOUR_DIGIT_BINARY[3]{
+            hNumArray.append("3")
+        } else if tempNum == FOUR_DIGIT_BINARY[4]{
+            hNumArray.append("4")
+        } else if tempNum == FOUR_DIGIT_BINARY[5]{
+            hNumArray.append("5")
+        } else if tempNum == FOUR_DIGIT_BINARY[6]{
+            hNumArray.append("6")
+        } else if tempNum == FOUR_DIGIT_BINARY[7]{
+            hNumArray.append("7")
+        } else if tempNum == FOUR_DIGIT_BINARY[8]{
+            hNumArray.append("8")
+        } else if tempNum == FOUR_DIGIT_BINARY[9]{
+            hNumArray.append("9")
+        } else if tempNum == FOUR_DIGIT_BINARY[10]{
+            hNumArray.append("A")
+        } else if tempNum == FOUR_DIGIT_BINARY[11]{
+            hNumArray.append("B")
+        } else if tempNum == FOUR_DIGIT_BINARY[12]{
+            hNumArray.append("C")
+        } else if tempNum == FOUR_DIGIT_BINARY[13]{
+            hNumArray.append("D")
+        } else if tempNum == FOUR_DIGIT_BINARY[14]{
+            hNumArray.append("E")
+        } else if tempNum == FOUR_DIGIT_BINARY[15]{
+            hNumArray.append("F")
+        } else {
+            outputMessageColour = Color.red
+            return "Error with input."
+        }
+
+        i += 4
+    }
+
+    let hNum = hNumArray.joined()
+    return hNum
+}
