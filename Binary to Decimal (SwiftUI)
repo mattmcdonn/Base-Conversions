@@ -1,0 +1,24 @@
+
+
+func bToD(inputNum: String) -> String{
+    
+    let originalNumArray = Array(inputNum)
+    var decimalNum = 0.00
+    
+    var i = 0
+    var j = originalNumArray.count - 1
+    
+    while (i < originalNumArray.count){
+        if let digit = Int(String(originalNumArray[i])) {
+            decimalNum += Double(digit * Int(pow(2.0, Double(j))))
+        } else {
+            outputMessageColour = Color.red
+            return "Error with input."
+        }
+        
+        i += 1
+        j -= 1
+    }
+    
+    return String(Int(decimalNum))
+}
