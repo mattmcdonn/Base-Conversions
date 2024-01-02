@@ -1,0 +1,48 @@
+/*
+*/
+
+func bToO(inputNum: String) -> String{
+    
+    var originalNumArray = Array(inputNum)
+    var oNumArray = Array<String>()
+
+    if originalNumArray.count % 3 == 1 {
+        originalNumArray.insert("0", at: 0)
+        originalNumArray.insert("0", at: 0)
+    } else if originalNumArray.count % 3 == 2{
+        originalNumArray.insert("0", at: 0)
+    }
+
+    var i = 0
+
+    while i < originalNumArray.count {
+        let tempArray = [String(originalNumArray[i]), String(originalNumArray[i + 1]), String(originalNumArray[i + 2])]
+        let tempNum = tempArray[0] + tempArray[1] + tempArray[2]
+
+        if tempNum == THREE_DIGIT_BINARY[0]{
+            oNumArray.append("0")
+        } else if tempNum == THREE_DIGIT_BINARY[1]{
+            oNumArray.append("1")
+        } else if tempNum == THREE_DIGIT_BINARY[2]{
+            oNumArray.append("2")
+        } else if tempNum == THREE_DIGIT_BINARY[3]{
+            oNumArray.append("3")
+        } else if tempNum == THREE_DIGIT_BINARY[4]{
+            oNumArray.append("4")
+        } else if tempNum == THREE_DIGIT_BINARY[5]{
+            oNumArray.append("5")
+        } else if tempNum == THREE_DIGIT_BINARY[6]{
+            oNumArray.append("6")
+        } else if tempNum == THREE_DIGIT_BINARY[7]{
+            oNumArray.append("7")
+        } else {
+            outputMessageColour = Color.red
+            return "Error with input."
+        }
+
+        i += 3
+    }
+
+    let oNum = oNumArray.joined()
+    return oNum
+}
