@@ -1,4 +1,8 @@
-
+/* * * * * * * * * * * * * * * * * * * *
+ *  Written by Matthew James McDonald  *
+ * * * * * * * * * * * * * * * * * * * *
+ *  FUNCTION QUATERNARY TO BINARY      *
+ * * * * * * * * * * * * * * * * * * * */
 
 func qToB(inputNum: String) -> String{
  
