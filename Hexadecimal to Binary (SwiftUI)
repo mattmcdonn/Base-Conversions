@@ -1,0 +1,55 @@
+
+
+func hToB(inputNum: String) -> String{
+    
+    let originalNumArray = Array(inputNum)
+    var bNumArray = Array<String>()
+    
+    var i = 0
+    
+    while (i < originalNumArray.count){
+        let tempNum = originalNumArray[i]
+        
+        if tempNum == "0"{
+            bNumArray.append(FOUR_DIGIT_BINARY[0])
+        } else if tempNum == "1"{
+            bNumArray.append(FOUR_DIGIT_BINARY[1])
+        } else if tempNum == "2"{
+            bNumArray.append(FOUR_DIGIT_BINARY[2])
+        } else if tempNum == "3"{
+            bNumArray.append(FOUR_DIGIT_BINARY[3])
+        } else if tempNum == "4"{
+            bNumArray.append(FOUR_DIGIT_BINARY[4])
+        } else if tempNum == "5"{
+            bNumArray.append(FOUR_DIGIT_BINARY[5])
+        } else if tempNum == "6"{
+            bNumArray.append(FOUR_DIGIT_BINARY[6])
+        } else if tempNum == "7"{
+            bNumArray.append(FOUR_DIGIT_BINARY[7])
+        } else if tempNum == "8"{
+            bNumArray.append(FOUR_DIGIT_BINARY[8])
+        } else if tempNum == "9"{
+            bNumArray.append(FOUR_DIGIT_BINARY[9])
+        } else if tempNum == "A"{
+            bNumArray.append(FOUR_DIGIT_BINARY[10])
+        } else if tempNum == "B"{
+            bNumArray.append(FOUR_DIGIT_BINARY[11])
+        } else if tempNum == "C"{
+            bNumArray.append(FOUR_DIGIT_BINARY[12])
+        } else if tempNum == "D"{
+            bNumArray.append(FOUR_DIGIT_BINARY[13])
+        } else if tempNum == "E"{
+            bNumArray.append(FOUR_DIGIT_BINARY[14])
+        } else if tempNum == "F"{
+            bNumArray.append(FOUR_DIGIT_BINARY[15])
+        } else {
+            outputMessageColour = Color.red
+            return "Error with input."
+        }
+        
+        i += 1
+    }
+    
+    let bNum = bNumArray.joined()
+    return bNum
+}
