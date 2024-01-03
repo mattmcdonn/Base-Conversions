@@ -1,4 +1,8 @@
-
+/* * * * * * * * * * * * * * * * * * * *
+ *  Written by Matthew James McDonald  *
+ * * * * * * * * * * * * * * * * * * * *
+ *  FUNCTION OCTAL TO BINARY           *
+ * * * * * * * * * * * * * * * * * * * */
 
 func oToB(inputNum: String) -> String{
     let originalNumArray = Array(inputNum)
