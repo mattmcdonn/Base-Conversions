@@ -1,0 +1,16 @@
+
+
+func dToB(inputNum: String) -> String{
+    
+    var currNum = Int(inputNum)
+    var bNumArray = Array<String>()
+    
+    while (currNum != 0){
+        bNumArray.append(String(currNum! % 2))
+        currNum = currNum! / 2
+    }
+    
+    bNumArray.reverse()
+    let bNum = bNumArray.joined()
+    return bNum
+}
