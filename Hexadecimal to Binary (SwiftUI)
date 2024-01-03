@@ -1,4 +1,8 @@
-
+/* * * * * * * * * * * * * * * * * * * *
+ *  Written by Matthew James McDonald  *
+ * * * * * * * * * * * * * * * * * * * *
+ *  FUNCTION HEXADECIMAL TO BINARY     *
+ * * * * * * * * * * * * * * * * * * * */
 
 func hToB(inputNum: String) -> String{
     
